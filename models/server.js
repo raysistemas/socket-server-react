@@ -16,12 +16,12 @@ class Server {
     this.server = http.createServer(this.app);
 
     // Configuraciones de sockets
-    this.io = socketio(this.server, {/* Configuracione */});
+    // this.io = socketio(this.server, {/* Configuracione */});
 
-    // this.io = socketio(this.server, {cors: {
-    //   origin: "*",
-    //   methods: ["GET", "POST"]
-    // }});
+     this.io = socketio(this.server, {cors: {
+       origin: "*",
+       methods: ["GET", "POST"]
+     }});
 
   }
 
